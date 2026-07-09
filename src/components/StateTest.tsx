@@ -1,7 +1,7 @@
 import { useFetch } from "../hooks/useFetch";
 import Header from "./Header";
 
-interface User {
+export interface User {
   id: number;
   firstName: string;
   email: string;

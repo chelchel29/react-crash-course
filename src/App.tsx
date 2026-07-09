@@ -3,6 +3,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
+import { userLoader } from "./loaders/user-loader";
+import UserPage from "./pages/UserPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +19,11 @@ function App() {
         {
           path: "/about",
           element: <AboutPage />,
+        },
+        {
+          path: "/users",
+          element: <UserPage />,
+          loader: userLoader,
         },
       ],
     },
