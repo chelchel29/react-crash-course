@@ -1,43 +1,20 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
+import Layout from "./components/layout";
 import { ThemeProvider } from "./context/ThemeContext";
-import AboutPage from "./pages/AboutPage";
-import HomePage from "./pages/HomePage";
-import MainLayout from "./layouts/MainLayout";
-import { userLoader } from "./loaders/user-loader";
-import UserPage from "./pages/UserPage";
-import { searchUserAction } from "./actions/search-user-action";
-import InfoPage from "./pages/InfoPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayout />,
-      children: [
-        {
-          index: true,
-          element: <HomePage />,
-        },
-        {
-          path: "/about",
-          element: <AboutPage />,
-        },
-        {
-          path: "/users",
-          element: <UserPage />,
-          loader: userLoader,
-          action: searchUserAction,
-        },
-        {
-          path: "/users/:id",
-          element: <InfoPage />,
-        },
-      ],
+      element: <Layout />,
+      children: [{}],
     },
   ]);
   return (
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <>
+        <RouterProvider router={router} />
+      </>
     </ThemeProvider>
   );
 }
