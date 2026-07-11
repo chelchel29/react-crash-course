@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router";
+import { Form, useLoaderData } from "react-router";
 import type { User } from "../components/StateTest";
 
 type UserData = {
@@ -11,6 +11,10 @@ export default function UserPage() {
 
   return (
     <div>
+      <Form action="/users" method="post">
+        <input name="id" type="text" placeholder="Search user..." />
+        <button type="submit">Search</button>
+      </Form>
       {users?.users.map((user) => (
         <li key={user.id}>
           {user.firstName}
