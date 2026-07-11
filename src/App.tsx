@@ -6,6 +6,7 @@ import MainLayout from "./layouts/MainLayout";
 import { userLoader } from "./loaders/user-loader";
 import UserPage from "./pages/UserPage";
 import { searchUserAction } from "./actions/search-user-action";
+import InfoPage from "./pages/InfoPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,6 +27,10 @@ function App() {
           element: <UserPage />,
           loader: userLoader,
           action: searchUserAction,
+        },
+        {
+          path: "/users/:id",
+          element: <InfoPage />,
         },
       ],
     },
