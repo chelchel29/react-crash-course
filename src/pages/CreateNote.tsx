@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Form, redirect, type ActionFunctionArgs } from "react-router";
-import { saveNote } from "../utils/stroage";
+import { saveNote } from "../utils/storage";
 
 export const createNoteAction = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();

@@ -1,4 +1,4 @@
-import type { Note } from "../types/indes";
+import type { Note } from "../types/index.ts";
 
 const STORAGE_KEY = "cardnotes_data";
 

@@ -1,6 +1,6 @@
 import { redirect, useLoaderData, type LoaderFunctionArgs } from "react-router";
-import { getNote } from "../utils/stroage";
-import type { Note } from "../types/indes";
+import { getNote } from "../utils/storage";
+import type { Note } from "../types";
 import { useEffect } from "react";
 
 export const NoteDetailLoader = ({ params }: LoaderFunctionArgs) => {

@@ -1,6 +1,6 @@
-import { Link, useLoaderData, useSearchParams } from "react-router";
-import { getNotes } from "../utils/stroage";
-import type { Note } from "../types/indes";
+import { Link, useLoaderData } from "react-router";
+import { getNotes } from "../utils/storage";
+import type { Note } from "../types";
 import { useState } from "react";
 
 export const dishboardLoader = () => {
