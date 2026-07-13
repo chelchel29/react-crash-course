@@ -26,7 +26,7 @@ function Dashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {filterNotes.map((note) => (
           <Link
-            to={"/note/${note.id}"}
+            to={`/note/${note.id}`}
             key={note.id}
             className="p-5 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:shadow-md transition-shadow"
           >
